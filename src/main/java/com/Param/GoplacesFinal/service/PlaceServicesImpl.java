@@ -19,23 +19,24 @@ public class PlaceServicesImpl implements PlaceServicesInterface {
 		List<Place> placeFinal = (List<Place>)placerepository.findAll();
 		return placeFinal;
 	}
-	@Override
-	public String save(Place placeDomain) {
+
+	public String save(Place placeDomain)
+	{
 
 		placerepository.save(placeDomain);
 		return "Successfully Saved";
 	}
 
-	@Override
-	public String update(Place placedomain) {
-		// TODO Auto-generated method stub
-		return null;
+	public String update(Place placeDomain)
+	{
+		placerepository.update(placeDomain);
+		return "updated Successfully";
 	}
 
-	@Override
-	public String delete(Place placedomain) {
-		// TODO Auto-generated method stub
-		return null;
+	public String delete(Place placedomain)
+	{
+		placerepository.delete(placedomain);
+		return "delete Successful";
 	}
 
 }
